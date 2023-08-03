@@ -1,0 +1,31 @@
+ALGORITHM point
+VAR
+    chaine: STRING;
+    taille:integer;
+    nb:integer:=1;
+    nbvoyelles :integer;
+BEGIN
+    REPEAT
+        
+    write("donner une phrase  ce termine par un point :")
+        read(chaine)
+
+    UNTIL (chaine[chaine.lenght]='.')
+    taille:= chaine.lenght 
+    for i from 0 to taille-1 step do 
+    
+        if chaine[i]=" " then
+             nb:= nb+1 ;
+        end if 
+    end for
+    
+ for i  from 0 to taille-1 step do 
+     if (chaine[i]="a" or chaine[i]= "e" or chaine[i]="i" or chaine[i]="o" or chaine[i]="u"or chaine[i]="y" )then 
+         nbvoyelles=nbvoyelles+1
+     end if
+  end for 
+
+      read("la taille de la phrase est :" taille)
+    read("le nombre des mots dans la phrase est : " nb)
+    read("le nombre de voyelles est:"nbvoyelles)
+END
